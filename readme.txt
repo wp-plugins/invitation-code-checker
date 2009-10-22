@@ -1,6 +1,5 @@
 === Plugin Name ===
 Contributors: GIGALinux
-Donate link: http://www.dennismorhardt.de/
 Tags: wpmu, buddypress, signup, invitation, code
 Requires at least: WordPress MU 2.8.4
 Tested up to: WordPress MU 2.8.4
