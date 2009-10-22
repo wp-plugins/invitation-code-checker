@@ -4,7 +4,7 @@ Plugin Name: Invitation Code Checker
 Plugin URI: http://wordpress.org/extend/plugins/invitation-code-checker/
 Description: With this plugin registrations are only allowed if the user has an invitation code. This plugin is only for WordPress MU and is BuddyPress compatible.
 Author: Dennis Morhardt
-Version: 1.0
+Version: 1.0.1
 Author URI: http://www.dennismorhardt.de/
 Site Wide Only: true
 
@@ -32,6 +32,7 @@ class Invitation_Code_Checker {
 		add_action( 'signup_extra_fields', array( &$this, 'add_code_field_to_signup' ) );
 		add_action( 'bp_after_signup_profile_fields', array( &$this, 'add_code_field_to_signup_buddypress' ) );
 		add_filter( 'wpmu_validate_user_signup', array( &$this, 'checkup' ) );
+		add_filter( 'bp_signup_validate', array( &$this, 'checkup_buddypress' ) );
 		add_action( 'update_wpmu_options', array( &$this, 'save_admin_options' ) );
 		add_action( 'wpmu_options', array( &$this, 'add_admin_options' ) );
 		load_plugin_textdomain( 'invitation-code-checker', WP_PLUGIN_URL . basename( dirname( __FILE__ ) ), basename( dirname( __FILE__ ) ) );
@@ -73,8 +74,15 @@ class Invitation_Code_Checker {
 			$content['errors']->add( 'invitation_code', __( 'The entered invitation code is wrong. Please try again!', 'invitation-code-checker' ) );
 	
 		$this->errors = $content['errors'];
-	
+
 		return $content;
+	}
+	
+	function checkup_buddypress() {
+		global $bp;
+		
+		if( $this->errors->errors['invitation_code'][0] )
+			$bp->signup->errors['invitation_code'] = $this->errors->errors['invitation_code'][0];
 	}
 	
 	function add_admin_options() { ?>
