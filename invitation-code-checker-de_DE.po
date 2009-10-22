@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Invitation Code Checker\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-10-18 20:30+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Dennis Morhardt <info@dennismorhardt.de>\n"
+"Language-Team: Dennis Morhardt <info@dennismorhardt.de>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ./\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: invitation-code-checker.php:43
+#: invitation-code-checker.php:84
+msgid "Invitation Code:"
+msgstr "Einladungscode:"
+
+#: invitation-code-checker.php:47
+msgid "The registration is only permitted with a valid invitation code."
+msgstr "Die Anmeldung ist nur mit einem gültigen Einladungscode möglich."
+
+#: invitation-code-checker.php:54
+#: invitation-code-checker.php:81
+msgid "Invitation Code"
+msgstr "Einladungscode"
+
+#: invitation-code-checker.php:54
+msgid "(required)"
+msgstr "(erforderlich)"
+
+#: invitation-code-checker.php:70
+msgid "Please enter an invitation code!"
+msgstr "Bitte gebe einen Einladungscode ein!"
+
+#: invitation-code-checker.php:73
+msgid "The entered invitation code is wrong. Please try again!"
+msgstr "Der eingegebene Einladungscode war falsch. Bitte versuche es nochmal!"
+
+#: invitation-code-checker.php:88
+msgid "Enter an invitation code, which is required to register. Leave blank to disable."
+msgstr "Zur Anmeldung notweniger Einladungscode, leer lassen um diese Funktion zu deaktivieren."
+
